@@ -19,7 +19,10 @@ export class ListItemsComponent {
   items: Array<any>=[];
 
   constructor(private itemService:ItemService) {
-    this.items=itemService.items;
+    setTimeout(()=>{
+      this.items=itemService.items;
+    },2000)
+
   }
 
   onEdit(){

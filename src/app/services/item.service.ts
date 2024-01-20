@@ -1,16 +1,42 @@
 import { Injectable } from '@angular/core';
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ItemService {
+  private apiUrl="https://api.codebyte-software.com:2323/api/items"
+
   items:Array<any>=[];
-  constructor() { }
+  constructor(private httpClient:HttpClient) {
+    this.readItems();
+  }
   createItem(item:any){
-    this.items.push(item);
-    console.log(this.items);
+    //tipuri de request:
+    //GET - READ
+    //POST - CREATE
+    //PUT,PATCH - UPDATE
+    //DELETE - DELETE
+    this.httpClient.post(this.apiUrl,item).subscribe((response:any)=>{
+      console.log(response)
+      console.log(response.message);
+
+      let itemFromDb = response.data
+      this.items.push(response.data);
+
+    })
+    //body este sub forma de json si trimiti catre server
+    //.subscribe inseamna ca ai trimis datele si urmeaza sa iti vina raspunsul
   }
   updateItem(item:any){
+    this.httpClient.put(this.apiUrl,item).subscribe((response:any)=>{
+      console.log(response)
+      console.log(response.message);
+
+      let itemFromDb = response.data
+      this.items.push(response.data);
+
+    })
 
   }
 
@@ -19,6 +45,10 @@ export class ItemService {
   }
 
   readItems(){
-
+    this.httpClient.get(this.apiUrl).subscribe((response:any) => {
+      this.items = [];
+      this.items = response.data;
+      console.log(response)
+    })
   }
 }
