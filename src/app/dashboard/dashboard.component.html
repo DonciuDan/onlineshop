@@ -1,3 +1,9 @@
 <p>dashboard works!</p>
-<app-add-edit-item></app-add-edit-item>
-<app-list-items></app-list-items>
+<!--cu input inroducem date-->
+<!--[item] reprezinta @Input("item") din componenta de add-edit-item-->
+<app-add-edit-item [item]="itemdata"></app-add-edit-item>
+<!--[] asa se scriu proprietatile-->
+<!--(changeData) reprezinta @Output din componenta list-items-->
+<app-list-items (changeData)="onChageItem($event)" [isAdmin]="false"></app-list-items>
+<!--in angular cand punem () inseamna ca o sa aveam un eveniment-->
+<!--cu evenimente putem extrage componente-->

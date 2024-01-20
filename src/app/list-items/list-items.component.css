@@ -2,3 +2,8 @@
   width: 400px;
   margin-bottom: 16px;
 }
+
+.image{
+  width: 100%;
+/* ATENTIE! la imagini doar doar lagimea sau lungimea pentru ca altfel daca le dai pe amandoua s-ar putea distorsiona imaginea */
+}

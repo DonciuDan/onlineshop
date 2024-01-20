@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {AddEditItemComponent} from "./add-edit-item/add-edit-item.component";
 import {ListItemsComponent} from "../list-items/list-items.component";
 
@@ -13,5 +13,11 @@ import {ListItemsComponent} from "../list-items/list-items.component";
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
+  itemdata: any;
 
+  onChageItem(item: any) {
+    console.log("Item a ajuns in dashboard");
+    console.log(item);
+    this.itemdata = item; // salvam itemul primit in componenta de dashboard
+  }
 }
