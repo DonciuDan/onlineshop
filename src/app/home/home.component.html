@@ -1,5 +1,3 @@
-<p>dashboard works!</p>
-
 <mat-drawer-container class="drawer-container" autosize>
   <mat-drawer #drawer class="drawer-sidenav" mode="side">
     <div class="div-logo">
@@ -11,9 +9,9 @@
         <p>Dan</p>
       </mat-card-content>
     </mat-card>
-    <mat-card class="card-menu-button" (click)="onHome()">
+    <mat-card class="card-menu-button" (click)="onDashboard()">
       <mat-card-content> <!-- iti pune acel padding sa nu fie textul lipit de inceputul cardului-->
-        <p>Home</p>
+        <p>Dashboard</p>
       </mat-card-content>
     </mat-card>
     <mat-card class="card-menu-button" (click)="onLogOut()">
@@ -38,15 +36,9 @@
       </button>
     </mat-toolbar>
 
-    <!--cu input inroducem date-->
-    <!--[item] reprezinta @Input("item") din componenta de add-edit-item-->
-    <app-add-edit-item [item]="itemdata"></app-add-edit-item>
-    <!--[] asa se scriu proprietatile-->
-    <!--(changeData) reprezinta @Output din componenta list-items-->
-    <app-list-items (changeData)="onChageItem($event)" [isAdmin]="true"></app-list-items>
-    <!--in angular cand punem () inseamna ca o sa aveam un eveniment-->
-    <!--cu evenimente putem extrage componente-->
+    <app-list-items [isAdmin]="false">
 
+    </app-list-items>
   </div>
 
 </mat-drawer-container>

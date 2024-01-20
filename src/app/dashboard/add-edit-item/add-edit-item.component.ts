@@ -54,7 +54,7 @@ export class AddEditItemComponent implements OnChanges {
   onSave(): void {
     let itemData = { // am creat astfel un json
       id:this.id,
-      title: this.title.getRawValue()!, //asa salvezi datele din form // ! este nullPointerOperator
+      title: this.title.getRawValue()!, //asa salvezi datele din form // ! este nullPointerOperator sa fim siguri ca nu returneaza ceva gol
       description: this.description.getRawValue()!,
       price: this.price.getRawValue()!,
       imageUrl: this.imageUrl.getRawValue()!
