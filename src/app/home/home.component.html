@@ -34,11 +34,15 @@
       <button mat-icon-button class="example-icon">
         <mat-icon>share</mat-icon>
       </button>
+      <app-cart-button></app-cart-button>
     </mat-toolbar>
-
-    <app-list-items [isAdmin]="false">
-
-    </app-list-items>
+    <img class="img-banner"
+         src="https://media.cnn.com/api/v1/images/stellar/prod/i-phone-15-lineup.jpg?c=16x9&q=h_833,w_1480,c_fill"/>
+    <!--daca vezi in url-ul de imagine database image 64 nu e bine, transmisa imaginea sub forma de string    -->
+    <img class="img-banner" src="https://cdn.britannica.com/09/241709-050-149181B1/apple-iphone-11-2019.jpg"/>
+    <img class="img-banner"
+         src="https://www.cnet.com/a/img/resize/e7d13c4b1ab0c78ab7cf97e4866525c47d93cc52/hub/2023/09/13/4d22fc36-24cf-4d60-b07f-4c76faec83c3/iphone-15-vs-15-pro.jpg?auto=webp&fit=crop&height=1200&width=1200"/>
+    <app-list-items [isAdmin]="false"></app-list-items>
   </div>
 
 </mat-drawer-container>

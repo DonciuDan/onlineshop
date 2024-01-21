@@ -18,11 +18,19 @@
 }
 
 .div-logo{
-  width: 100%; /*  va luat spatiul disponibili*/
+  width: 100%; /*  va lua spatiul disponibili*/
   display: flex;
 }
 
 .img-logo{
   height: 150px;
   margin: auto;
+}
+
+.img-banner{
+  width: 30%;
+  margin: 16px;
+  height: 200px;
+  border-radius: 5px;
+  object-fit: cover;
 }
