@@ -35,10 +35,10 @@ export class AddEditItemComponent implements OnChanges {
     console.log(this.item);
     if (this.item != null) {
       this.id = this.item.id;
-      this.title = new FormControl(this.item.title, [Validators.required]);
+      this.title = new FormControl(this.item.name, [Validators.required]);
       this.description = new FormControl(this.item.description, [Validators.required]);
       this.price = new FormControl(this.item.price, [Validators.required]);
-      this.imageUrl = new FormControl(this.item.imageUrl, [Validators.required]);
+      this.imageUrl = new FormControl(this.item.image, [Validators.required]);
     }
 
   }
@@ -54,10 +54,11 @@ export class AddEditItemComponent implements OnChanges {
   onSave(): void {
     let itemData = { // am creat astfel un json
       id:this.id,
-      title: this.title.getRawValue()!, //asa salvezi datele din form // ! este nullPointerOperator sa fim siguri ca nu returneaza ceva gol
+      name: this.title.getRawValue()!, //asa salvezi datele din form // ! este nullPointerOperator sa fim siguri ca nu returneaza ceva gol
       description: this.description.getRawValue()!,
       price: this.price.getRawValue()!,
-      imageUrl: this.imageUrl.getRawValue()!
+      image: this.imageUrl.getRawValue()!,
+      category: ""
     };
     console.log(itemData);
     if (itemData.id == ""){

@@ -2,34 +2,43 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {BehaviorSubject} from "rxjs";
 
+
 @Injectable({
   providedIn: 'root'
 })
-export class ItemService {
-  private itemObservable = new BehaviorSubject<Array<any>>([]);
-  private apiUrl = "http://localhost:8081/api/items"
-
-  items: Array<any> = [];
+export class UserService {
+  private user: any;
+  private apiUrl: string = "http://localhost:8081/api/customers";
+  private userObservable = new BehaviorSubject([]);
 
   constructor(private httpClient: HttpClient) {
-    this.readItems();
+    this.readUsers();
   }
 
-  getItemList() {
-    return this.itemObservable.asObservable(); //itemObservable este o denumire
+  public setLoggedUser(user: any) {
+    this.user = user;
   }
 
-  createItem(item: any) {
+  public getLoggedUser() {
+    return this.user
+  }
+
+
+  getUserList() {
+    return this.userObservable.asObservable(); //itemObservable este o denumire
+  }
+
+  createUser(user: any) {
     //tipuri de request:
     //GET - READ
     //POST - CREATE
     //PUT,PATCH - UPDATE
     //DELETE - DELETE
-    this.httpClient.post(`${this.apiUrl}/addNewItem`, item).subscribe((response: any) => {
+    this.httpClient.post(`${this.apiUrl}/addNewCustomer`, user).subscribe((response: any) => {
       console.log(response)
       console.log(response.message);
 
-      this.readItems(); //de fiecare data cand o sa adaugam un element o sa facem un request catre baza de date si o sa primim un list
+      this.readUsers(); //de fiecare data cand o sa adaugam un element o sa facem un request catre baza de date si o sa primim un list
       //se actualizeaza lista de elemente
 
       // let itemFromDb = response.data
@@ -40,12 +49,12 @@ export class ItemService {
     //.subscribe inseamna ca ai trimis datele si urmeaza sa iti vina raspunsul
   }
 
-  updateItem(item: any) {
-    this.httpClient.put(`${this.apiUrl}/updateItem`, item).subscribe((response: any) => {
+  updateUser(user: any) {
+    this.httpClient.put(`${this.apiUrl}/updateCustomer`, user).subscribe((response: any) => {
       console.log(response)
       console.log(response.message);
 
-      this.readItems();
+      this.readUsers();
       // let itemFromDb = response.data
       // this.items.push(response.data);
 
@@ -53,18 +62,18 @@ export class ItemService {
 
   }
 
-  deleteItem(item: any) {
-    this.httpClient.delete(`${this.apiUrl}/deleteItem/${item.id}`).subscribe((response : any) => {
+  deleteUser(user: any) {
+    this.httpClient.delete(`${this.apiUrl}/deleteCustomerById/${user.id}`).subscribe((response: any) => {
       // acolo cu `$ e o metoda de a concatena stringurile in angular, e reco fiindca e mai rapid si mai usor de inteles, la concatenarea clasica ar consuma mai multe resurse
       console.log(response);
-      this.readItems()
+      this.readUsers();
     })
 
   }
 
-  readItems() {
+  readUsers() {
     this.httpClient.get(this.apiUrl).subscribe((response: any) => {
-      this.itemObservable.next(response.data); //lambda expression - e o modalitate prin care simplificam codul
+      this.userObservable.next(response.data); //lambda expression - e o modalitate prin care simplificam codul
       //metoda next trimite notificari catre toti care au dat subscribe
       console.log(response)
     })

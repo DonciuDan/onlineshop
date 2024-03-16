@@ -6,7 +6,12 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = "https://api.codebyte-software.com:2323/api/users"
+//  private apiUrl = "https://api.codebyte-software.com:2323/api/users"
+  private apiUrl = "http://localhost:8081/api/auth"
+  //http://localhost:8081/api/users
+  //http://localhost:8081/api/items
+  //http://localhost:8081/api/orders
+  //asta o sa punem la adrese pe fiecare service
 
   constructor(private httpClient:HttpClient) {
 
