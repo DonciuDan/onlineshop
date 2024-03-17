@@ -9,7 +9,7 @@
         <p>Dan</p>
       </mat-card-content>
     </mat-card>
-    <mat-card class="card-menu-button" (click)="onDashboard()">
+    <mat-card class="card-menu-button" *ngIf="isUserAdmin()" (click)="onDashboard()">
       <mat-card-content> <!-- iti pune acel padding sa nu fie textul lipit de inceputul cardului-->
         <p>Dashboard</p>
       </mat-card-content>
