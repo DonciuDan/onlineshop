@@ -1,33 +1,34 @@
 <mat-drawer-container class="drawer-container background-img" autosize>
   <mat-drawer #drawer class="drawer-sidenav" mode="side">
     <div class="div-logo">
-      <img class="img-logo" src="../../assets/gym-logo.jpeg"/>
+      <img class="img-logo" (click)="onLogo()" src="../../assets/gym-logo.jpeg"/>
     </div>
+
     <mat-card class="card-menu-button" (click)="onAntrenamente()">
       <mat-card-content> <!-- iti pune acel padding sa nu fie textul lipit de inceputul cardului-->
         <p>Antrenamente</p>
       </mat-card-content>
     </mat-card>
 
-    <mat-card class="card-menu-button">
+    <mat-card class="card-menu-button" (click)="onNutritie()">
       <mat-card-content>
         <p>Nutritie</p>
       </mat-card-content>
     </mat-card>
 
-    <mat-card class="card-menu-button">
+    <mat-card class="card-menu-button" (click)="onEchipamenteSportive()">
       <mat-card-content>
         <p>Echipament Sportiv</p>
       </mat-card-content>
     </mat-card>
 
-    <mat-card class="card-menu-button">
+    <mat-card class="card-menu-button" (click)="onSuplimente()">
       <mat-card-content>
         <p>Suplimente</p>
       </mat-card-content>
     </mat-card>
 
-    <mat-card class="card-menu-button">
+    <mat-card class="card-menu-button" (click)="onSala()">
       <mat-card-content>
         <p>Sala</p>
       </mat-card-content>

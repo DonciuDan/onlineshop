@@ -1,7 +1,7 @@
 <mat-drawer-container class="drawer-container background-img" autosize>
   <mat-drawer #drawer class="drawer-sidenav" mode="side">
     <div class="div-logo">
-      <img class="img-logo" src="../../assets/gym-logo.jpeg"/>
+      <img class="img-logo" (click)="onLogo()" src="../../assets/gym-logo.jpeg"/>
     </div>
     <mat-card class="card-menu-button" (click)="onAntrenamente()">
       <mat-card-content> <!-- iti pune acel padding sa nu fie textul lipit de inceputul cardului-->

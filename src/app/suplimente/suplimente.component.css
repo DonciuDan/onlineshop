@@ -15,6 +15,7 @@
 .card-menu-button {
   width: 350px;
   margin-bottom: 16px;
+  cursor: pointer;
 }
 
 .div-logo{
@@ -27,6 +28,7 @@
   height: 150px;
   margin: auto;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .img-banner{

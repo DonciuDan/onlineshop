@@ -9,6 +9,7 @@
   width: 400px;
   margin: auto;
 /*  a centrat*/
+/*  text-align: center !important;*/
 }
 
 .div-buttons-container{
@@ -20,18 +21,29 @@
 }
 
 .auth-div{
-  display: flex;
+  /*display: flex;*/  /* cand e flex poti manipula spatiu
   height: 100%;
+  margin: auto;
+  /*vertical-align: middle;*/
+  text-align: center !important;
+
 }
 
 .div-logo{
-  width: 100%; /*  va lua spatiul disponibili*/
-  display: flex;
+  /*width: 100%; !*  va lua spatiul disponibili*!*/
+  /*display: flex;*/
+  /*margin: auto;*/
 }
 
 .img-logo{
   /*background-image: url("../../assets/phone.png");*/
   height: 150px;
-  margin: auto;
+  /*margin: auto;*/
   border-radius: 50%;
+  cursor: pointer;
 }
+
+body{
+  background-color: #dcdcdc;
+}
+

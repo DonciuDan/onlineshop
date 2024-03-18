@@ -56,4 +56,25 @@ export class DashboardComponent {
   onLogOut(){
     this.router.navigate(['/','auth']);
   }
+
+  onAntrenamente() {
+    this.router.navigate(['/', 'antrenamente']);
+  }
+  onEchipamenteSportive() {
+    this.router.navigate(['/', 'echipament-sportiv']);
+  }
+  onSala() {
+    this.router.navigate(['/', 'sala']);
+  }
+  onSuplimente() {
+    this.router.navigate(['/', 'suplimente']);
+  }
+  onNutritie() {
+    this.router.navigate(['/', 'nutritie']);
+  }
+
+  onLogo(){
+    this.router.navigate(["/","home"])
+  }
+
 }

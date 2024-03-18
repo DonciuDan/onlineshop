@@ -71,4 +71,8 @@ export class EchipamentSportivComponent {
     this.router.navigate(['/', 'nutritie']);
   }
 
+  onLogo(){
+    this.router.navigate(["/","home"])
+  }
+
 }

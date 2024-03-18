@@ -1,8 +1,9 @@
+<body>
 <div [ngSwitch]="viewType" class="auth-div">
+  <div class="div-logo">
+    <img class="img-logo" (click)="onLogo()" src="../../assets/gym-logo.jpeg"/>
+  </div>
   <mat-card class="card-container" *ngSwitchCase="'login'">
-    <div class="div-logo" (click)="onLogo()">
-      <img class="img-logo" src="../../assets/gym-logo.jpeg"/>
-    </div>
     <mat-card-content>
       <div class="input-container">
         <mat-form-field class="input-field">
@@ -24,7 +25,9 @@
       </div>
       <div class="div-buttons-container">
         <button mat-raised-button color="primary" class="btn-save" (click)="onLogin()">Log In</button>
-        <button mat-raised-button color="primary" class="btn-save" (click)="onSwitchViewType('register')">Create an account?</button>
+        <button mat-raised-button color="primary" class="btn-save" (click)="onSwitchViewType('register')">Create an
+          account?
+        </button>
       </div>
 
     </mat-card-content>
@@ -69,9 +72,11 @@
       </div>
       <div class="div-buttons-container">
         <button mat-raised-button color="primary" class="btn-save" (click)="onRegister()">Register</button>
-        <button mat-raised-button color="primary" class="btn-save" (click)="onSwitchViewType('login')">Back to Login</button>
+        <button mat-raised-button color="primary" class="btn-save" (click)="onSwitchViewType('login')">Back to Login
+        </button>
       </div>
 
     </mat-card-content>
   </mat-card>
 </div>
+</body>

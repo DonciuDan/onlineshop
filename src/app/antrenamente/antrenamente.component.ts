@@ -73,4 +73,7 @@ export class AntrenamenteComponent {
     this.router.navigate(['/', 'nutritie']);
   }
 
+  onLogo(){
+    this.router.navigate(["/","home"])
+  }
 }

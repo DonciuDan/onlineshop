@@ -70,4 +70,9 @@ export class SuplimenteComponent {
   onNutritie() {
     this.router.navigate(['/', 'nutritie']);
   }
+
+  onLogo(){
+    this.router.navigate(["/","home"])
+  }
+
 }
