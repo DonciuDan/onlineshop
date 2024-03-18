@@ -1,33 +1,30 @@
-import {Component} from '@angular/core';
-import {MatSidenavModule} from "@angular/material/sidenav";
+import { Component } from '@angular/core';
+import {CartButtonComponent} from "../home/cart-button/cart-button.component";
 import {MatButtonModule} from "@angular/material/button";
-import {MatToolbarModule} from "@angular/material/toolbar";
-import {MatIconModule} from "@angular/material/icon";
 import {MatCardModule} from "@angular/material/card";
-import {Router} from "@angular/router";
-import {ListItemsComponent} from "../list-items/list-items.component";
-import {CartButtonComponent} from "./cart-button/cart-button.component";
-import {UserService} from "../services/user.service";
+import {MatIconModule} from "@angular/material/icon";
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatToolbarModule} from "@angular/material/toolbar";
 import {NgIf} from "@angular/common";
+import {Router} from "@angular/router";
+import {UserService} from "../services/user.service";
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-nutritie',
   standalone: true,
-  imports: [
-    MatSidenavModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatCardModule,
-    ListItemsComponent,
-    CartButtonComponent,
-    NgIf
-  ],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+    imports: [
+        CartButtonComponent,
+        MatButtonModule,
+        MatCardModule,
+        MatIconModule,
+        MatSidenavModule,
+        MatToolbarModule,
+        NgIf
+    ],
+  templateUrl: './nutritie.component.html',
+  styleUrl: './nutritie.component.css'
 })
-export class HomeComponent {
-
+export class NutritieComponent {
   constructor(private router: Router, private userService: UserService) {
 
   }
@@ -60,6 +57,18 @@ export class HomeComponent {
 
   onAntrenamente() {
     this.router.navigate(['/', 'antrenamente']);
+  }
+  onEchipamenteSportive() {
+    this.router.navigate(['/', 'echipament-sportiv']);
+  }
+  onSala() {
+    this.router.navigate(['/', 'sala']);
+  }
+  onSuplimente() {
+    this.router.navigate(['/', 'suplimente']);
+  }
+  onNutritie() {
+    this.router.navigate(['/', 'nutritie']);
   }
 
 }

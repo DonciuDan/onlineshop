@@ -30,7 +30,7 @@ export class ListUsersComponent {
     this.changeUserData.emit(user);
   }
   onDelete(user:any){
-
+    this.userService.deleteUser(user)
   }
 
 

@@ -1,14 +1,39 @@
-<mat-drawer-container class="drawer-container" autosize>
+<mat-drawer-container class="drawer-container background-img" autosize>
   <mat-drawer #drawer class="drawer-sidenav" mode="side">
     <div class="div-logo">
-      <img class="img-logo"
-           src="https://img.freepik.com/premium-vector/colorful-bird-illustration-gradient-abstract_343694-1740.jpg"/>
+      <img class="img-logo" src="../../assets/gym-logo.jpeg"/>
     </div>
+
     <mat-card class="card-menu-button">
       <mat-card-content> <!-- iti pune acel padding sa nu fie textul lipit de inceputul cardului-->
-        <p>Dan</p>
+        <p>Antrenamente</p>
       </mat-card-content>
     </mat-card>
+
+    <mat-card class="card-menu-button">
+      <mat-card-content>
+        <p>Nutritie</p>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="card-menu-button">
+      <mat-card-content>
+        <p>Echipament Sportiv</p>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="card-menu-button">
+      <mat-card-content>
+        <p>Suplimente</p>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="card-menu-button">
+      <mat-card-content>
+        <p>Sala</p>
+      </mat-card-content>
+    </mat-card>
+
     <mat-card class="card-menu-button" (click)="onHome()">
       <mat-card-content> <!-- iti pune acel padding sa nu fie textul lipit de inceputul cardului-->
         <p>Home</p>
@@ -16,7 +41,7 @@
     </mat-card>
     <mat-card class="card-menu-button" (click)="onLogOut()">
       <mat-card-content> <!-- iti pune acel padding sa nu fie textul lipit de inceputul cardului-->
-        <p>Logout</p>
+        <p>LogOut</p>
       </mat-card-content>
     </mat-card>
   </mat-drawer>

@@ -2,13 +2,15 @@ import {Component} from '@angular/core';
 import {CartService} from "../../services/cart.service";
 import {MatCardModule} from "@angular/material/card";
 import {NgForOf} from "@angular/common";
+import {MatButtonModule} from "@angular/material/button";
 
 @Component({
   selector: 'app-list-orders',
   standalone: true,
   imports: [
     MatCardModule,
-    NgForOf
+    NgForOf,
+    MatButtonModule
   ],
   templateUrl: './list-orders.component.html',
   styleUrl: './list-orders.component.css'

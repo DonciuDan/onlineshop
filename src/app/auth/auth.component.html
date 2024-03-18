@@ -1,5 +1,8 @@
 <div [ngSwitch]="viewType" class="auth-div">
   <mat-card class="card-container" *ngSwitchCase="'login'">
+    <div class="div-logo" (click)="onLogo()">
+      <img class="img-logo" src="../../assets/gym-logo.jpeg"/>
+    </div>
     <mat-card-content>
       <div class="input-container">
         <mat-form-field class="input-field">

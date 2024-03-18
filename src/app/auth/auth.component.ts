@@ -84,10 +84,12 @@ export class AuthComponent {
     }
   }
 
-
   onSwitchViewType(viewType: string) {
     this.viewType = viewType;
+  }
 
+  onLogo(){
+    this.router.navigate(["/","home"])
   }
 }
 

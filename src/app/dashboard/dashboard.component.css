@@ -25,4 +25,18 @@
 .img-logo{
   height: 150px;
   margin: auto;
+  border-radius: 50%;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.background-img {
+  height: 100%;
+  color: #fff;
+  background-image: url("../../assets/gym-background.JPG");
+  /*background-size: 100%;*/
+  /*background-size: cover;*/
+  background-size: cover;
 }

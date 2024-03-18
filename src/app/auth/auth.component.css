@@ -23,3 +23,15 @@
   display: flex;
   height: 100%;
 }
+
+.div-logo{
+  width: 100%; /*  va lua spatiul disponibili*/
+  display: flex;
+}
+
+.img-logo{
+  /*background-image: url("../../assets/phone.png");*/
+  height: 150px;
+  margin: auto;
+  border-radius: 50%;
+}
