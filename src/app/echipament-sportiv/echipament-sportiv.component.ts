@@ -8,6 +8,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {NgIf} from "@angular/common";
 import {Router} from "@angular/router";
 import {UserService} from "../services/user.service";
+import {ListItemsComponent} from "../list-items/list-items.component";
 
 @Component({
   selector: 'app-echipament-sportiv',
@@ -19,7 +20,8 @@ import {UserService} from "../services/user.service";
         MatIconModule,
         MatSidenavModule,
         MatToolbarModule,
-        NgIf
+        NgIf,
+        ListItemsComponent
     ],
   templateUrl: './echipament-sportiv.component.html',
   styleUrl: './echipament-sportiv.component.css'

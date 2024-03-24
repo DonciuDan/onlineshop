@@ -52,8 +52,7 @@
 
 .background-img {
   height: 100%;
-  color:
-    #fff;
+  /*color:   #fff;*/
   background-image: url("../../assets/gym-background.JPG");
   /*background-size: 100%;*/
   /*background-size: cover;*/
@@ -78,5 +77,6 @@
   height: 60px;
   /*margin: auto;*/
   display: flex;
+  /*flex: 1 1 auto;*/
   /*text-align: center;*/
 }

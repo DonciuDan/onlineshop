@@ -4,16 +4,20 @@ import {MatInputModule} from "@angular/material/input";
 import {FormControl, ReactiveFormsModule, Validators} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
 import {ItemService} from "../../services/item.service";
+import {MatOptionModule} from "@angular/material/core";
+import {MatSelectModule} from "@angular/material/select";
 
 @Component({
   selector: 'app-add-edit-item',
   standalone: true,
-  imports: [
-    MatCardModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    MatButtonModule
-  ],
+    imports: [
+        MatCardModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatButtonModule,
+        MatOptionModule,
+        MatSelectModule
+    ],
   templateUrl: './add-edit-item.component.html',
   styleUrl: './add-edit-item.component.css'
 })
@@ -26,6 +30,7 @@ export class AddEditItemComponent implements OnChanges {
   description = new FormControl('', [Validators.required]);
   price = new FormControl('', [Validators.required]);
   imageUrl = new FormControl('', [Validators.required]);
+  category = new FormControl('', [Validators.required]);
 
   constructor(private itemService: ItemService) {
   }
@@ -39,6 +44,7 @@ export class AddEditItemComponent implements OnChanges {
       this.description = new FormControl(this.item.description, [Validators.required]);
       this.price = new FormControl(this.item.price, [Validators.required]);
       this.imageUrl = new FormControl(this.item.image, [Validators.required]);
+      this.category = new FormControl(this.item.category, [Validators.required]);
     }
 
   }
@@ -58,7 +64,7 @@ export class AddEditItemComponent implements OnChanges {
       description: this.description.getRawValue()!,
       price: this.price.getRawValue()!,
       image: this.imageUrl.getRawValue()!,
-      category: ""
+      category: this.category.getRawValue()!,
     };
     console.log(itemData);
     if (itemData.id == ""){
@@ -77,6 +83,7 @@ export class AddEditItemComponent implements OnChanges {
     this.description = new FormControl('', [Validators.required]);
     this.price = new FormControl('', [Validators.required]);
     this.imageUrl = new FormControl('', [Validators.required]);
+    this.category = new FormControl('', [Validators.required]);
 
   }
 }

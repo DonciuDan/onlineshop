@@ -24,6 +24,7 @@ export class ListItemsComponent {
   items: Array<any> = [];
   @Input("isAdmin") isAdmin: boolean = false;
 
+
   constructor(private itemService: ItemService, private cartService: CartService, private userService: UserService, private router: Router) {
     this.itemService.getItemList().subscribe((itemsList: Array<any>) => {
       this.items = itemsList; // prin acest subscribe ne asiguram ca vom primi notificari despre lista in timp real
@@ -47,6 +48,23 @@ export class ListItemsComponent {
     } else {
       alert("The user is not logged, you must login before add to cart");
       this.router.navigate(["/", "auth"]);
+    }
+  }
+
+  getCategoryTitle(category: String) {
+    switch (category) {
+      case "ECHIPAMENTSPORTIV":
+        return "Echipament Sportiv";
+      case  "ANTRENAMENTE":
+        return "Antrenamente";
+      case  "SUPLIMENTE":
+        return "Suplimente";
+      case  "NUTRITIE":
+        return "Nutritie";
+      case  "SALA":
+        return "Sala";
+      default:
+        return "";
     }
   }
 }
