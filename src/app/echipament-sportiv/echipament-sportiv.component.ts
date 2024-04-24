@@ -9,6 +9,7 @@ import {NgIf} from "@angular/common";
 import {Router} from "@angular/router";
 import {UserService} from "../services/user.service";
 import {ListItemsComponent} from "../list-items/list-items.component";
+import {ItemService} from "../services/item.service";
 
 @Component({
   selector: 'app-echipament-sportiv',
@@ -27,9 +28,12 @@ import {ListItemsComponent} from "../list-items/list-items.component";
   styleUrl: './echipament-sportiv.component.css'
 })
 export class EchipamentSportivComponent {
-  constructor(private router: Router, private userService: UserService) {
 
+  constructor(private router: Router, private userService: UserService, private itemService: ItemService) {
+    itemService.readItemsByCategory("EchipamentSportiv")
   }
+
+
 
   isUserAdmin() {
     if (this.userService.getLoggedUser() != null && this.userService.getLoggedUser().userRole == "ADMIN") {
@@ -44,6 +48,8 @@ export class EchipamentSportivComponent {
     }
     return false;
   }
+
+
 
   onDashboard() {
     this.router.navigate(['/', 'dashboard']);

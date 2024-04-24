@@ -3,7 +3,6 @@
     <div class="div-logo">
       <img class="img-logo" (click)="onLogo()" src="../../assets/gym-logo.jpeg"/>
     </div>
-
     <mat-card class="card-menu-button" (click)="onAntrenamente()">
       <mat-card-content> <!-- iti pune acel padding sa nu fie textul lipit de inceputul cardului-->
         <p>Antrenamente</p>
@@ -68,14 +67,51 @@
       </button>
       <app-cart-button></app-cart-button>
     </mat-toolbar>
-<!--    <img class="img-banner"-->
-<!--         src="https://media.cnn.com/api/v1/images/stellar/prod/i-phone-15-lineup.jpg?c=16x9&q=h_833,w_1480,c_fill"/>-->
-<!--    &lt;!&ndash;daca vezi in url-ul de imagine database image 64 nu e bine, transmisa imaginea sub forma de string    &ndash;&gt;-->
-<!--    <img class="img-banner" src="https://cdn.britannica.com/09/241709-050-149181B1/apple-iphone-11-2019.jpg"/>-->
-<!--    <img class="img-banner"-->
-<!--         src="https://www.cnet.com/a/img/resize/e7d13c4b1ab0c78ab7cf97e4866525c47d93cc52/hub/2023/09/13/4d22fc36-24cf-4d60-b07f-4c76faec83c3/iphone-15-vs-15-pro.jpg?auto=webp&fit=crop&height=1200&width=1200"/>-->
-<!--    <app-list-items [isAdmin]="false"></app-list-items>-->
+    <!--    <img class="img-banner"-->
+    <!--         src="https://media.cnn.com/api/v1/images/stellar/prod/i-phone-15-lineup.jpg?c=16x9&q=h_833,w_1480,c_fill"/>-->
+    <!--    &lt;!&ndash;daca vezi in url-ul de imagine database image 64 nu e bine, transmisa imaginea sub forma de string    &ndash;&gt;-->
+    <!--    <img class="img-banner" src="https://cdn.britannica.com/09/241709-050-149181B1/apple-iphone-11-2019.jpg"/>-->
+    <!--    <img class="img-banner"-->
+    <!--         src="https://www.cnet.com/a/img/resize/e7d13c4b1ab0c78ab7cf97e4866525c47d93cc52/hub/2023/09/13/4d22fc36-24cf-4d60-b07f-4c76faec83c3/iphone-15-vs-15-pro.jpg?auto=webp&fit=crop&height=1200&width=1200"/>-->
+    <!--    <app-list-items [isAdmin]="false"></app-list-items>-->
+
   </div>
+
+  <div class="video-section">
+    <video class="video-home-page" autoplay="" muted="" playsinline=""
+           src="../../assets/video1.mp4">
+      <!--           style="width: 503px; height: 282.938px;">-->
+    </video>
+  </div>
+  <mat-card class="our-story">
+    <mat-card-header>
+<!--      <div mat-card-avatar class="example-header-image"></div>-->
+      <mat-card-title >Povestea noastra </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p></p>
+      <p>
+        Totul a început cu pasiunea și visul unui antrenor dedicat, numit Dan. Dan a fost întotdeauna fascinat de fitness și de modul în care acesta poate transforma viețile oamenilor. În timp ce lucra ca antrenor la diverse săli de fitness, el își dădea seama că vrea să creeze ceva mai mult decât un simplu loc de antrenament. Voia să creeze un mediu în care oamenii să se simtă motivați, încurajați și susținuți în călătoria lor către sănătate și bunăstare.
+      </p>
+      <p>
+        Cu acest vis în minte, Dan a început să-și pună planurile în aplicare. Cu multă muncă și sacrificii personale, Dan a reușit să deschidă ușile sălii de fitness in anul 2014. În primele zile, sala era mică și modestă, iar numărul clienților era limitat. Totuși, pasiunea și angajamentul lui Dan au început să atragă oamenii în căutarea unui loc în care să se antreneze și să se simtă parte dintr-o comunitate.
+      </p>
+      <p>
+        Pe măsură ce timpul a trecut, reputatia salii a început să se răspândească. Oamenii au început să aprecieze atmosfera prietenoasă și motivatoare, precum și profesionalismul și dedicarea antrenorilor. Prin grija și atenția acordată fiecărui client, Dan a reușit să construiască o comunitate loială în jurul sălii sale de fitness.
+      </p>
+      <p>
+        Astfel, povestea sălii de fitness a început cu visul, pasiunea si valoriile unui antrenor dedicat, care a fost determinat să creeze un spațiu în care oamenii să se simtă inspirați și încurajați, indiferent de stadiul in care sunt, să-și îmbunătățească sănătatea și calitatea vieții lor. De-a lungul timpului, această pasiune și angajament au transformat sala de fitness într-un loc de referință în comunitatea sa.
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <mat-grid-list cols="3" rowHeight="2.3:1">
+    <mat-grid-tile>
+      <div class="img-members"><img src ="../../assets/gym-members.png"/> </div>
+    </mat-grid-tile>
+    <mat-grid-tile>2</mat-grid-tile>
+    <mat-grid-tile>3</mat-grid-tile>
+  </mat-grid-list>
+
 
 </mat-drawer-container>
 

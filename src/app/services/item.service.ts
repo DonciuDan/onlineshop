@@ -19,6 +19,10 @@ export class ItemService {
     return this.itemObservable.asObservable(); //itemObservable este o denumire
   }
 
+  // getItemByCategory(){
+  //   return this.items;
+  // }
+
   createItem(item: any) {
     //tipuri de request:
     //GET - READ
@@ -54,7 +58,7 @@ export class ItemService {
   }
 
   deleteItem(item: any) {
-    this.httpClient.delete(`${this.apiUrl}/deleteItem/${item.id}`).subscribe((response : any) => {
+    this.httpClient.delete(`${this.apiUrl}/deleteItem/${item.id}`).subscribe((response: any) => {
       // acolo cu `$ e o metoda de a concatena stringurile in angular, e reco fiindca e mai rapid si mai usor de inteles, la concatenarea clasica ar consuma mai multe resurse
       console.log(response);
       this.readItems()
@@ -69,4 +73,12 @@ export class ItemService {
       console.log(response)
     })
   }
+
+  readItemsByCategory(category: string) {
+    this.httpClient.get(this.apiUrl + "/itemsByCategory/" + category.toUpperCase()).subscribe((response: any) => {
+      this.itemObservable.next(response.data);
+      console.log(response)
+    })
+  }
+
 }

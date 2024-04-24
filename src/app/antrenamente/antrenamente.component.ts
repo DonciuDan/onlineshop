@@ -9,6 +9,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {NgIf} from "@angular/common";
 import {Router} from "@angular/router";
 import {UserService} from "../services/user.service";
+import {ItemService} from "../services/item.service";
 
 @Component({
   selector: 'app-antrenamente',
@@ -27,8 +28,8 @@ import {UserService} from "../services/user.service";
   styleUrl: './antrenamente.component.css'
 })
 export class AntrenamenteComponent {
-  constructor(private router: Router, private userService: UserService) {
-
+  constructor(private router: Router, private userService: UserService, private itemService: ItemService) {
+    itemService.readItemsByCategory("Antrenamente")
   }
 
   isUserAdmin() {

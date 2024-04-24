@@ -8,7 +8,10 @@ import {Router} from "@angular/router";
 import {ListItemsComponent} from "../list-items/list-items.component";
 import {CartButtonComponent} from "./cart-button/cart-button.component";
 import {UserService} from "../services/user.service";
-import {NgIf} from "@angular/common";
+import {NgForOf, NgIf} from "@angular/common";
+import {EchipamentSportivComponent} from "../echipament-sportiv/echipament-sportiv.component";
+import {ItemService} from "../services/item.service";
+import {MatGridListModule} from "@angular/material/grid-list";
 
 @Component({
   selector: 'app-home',
@@ -21,15 +24,17 @@ import {NgIf} from "@angular/common";
     MatCardModule,
     ListItemsComponent,
     CartButtonComponent,
-    NgIf
+    NgIf,
+    NgForOf,
+    MatGridListModule
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
 
-  constructor(private router: Router, private userService: UserService) {
-
+  constructor(private router: Router, private userService: UserService, private itemService: ItemService) {
+    this.itemService.readItems();
   }
 
   isUserAdmin() {
@@ -78,4 +83,5 @@ export class HomeComponent {
     this.router.navigate(["/","home"])
   }
 
+  protected readonly EchipamentSportivComponent = EchipamentSportivComponent;
 }

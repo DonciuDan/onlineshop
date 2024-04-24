@@ -8,25 +8,28 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {NgIf} from "@angular/common";
 import {Router} from "@angular/router";
 import {UserService} from "../services/user.service";
+import {ItemService} from "../services/item.service";
+import {ListItemsComponent} from "../list-items/list-items.component";
 
 @Component({
   selector: 'app-nutritie',
   standalone: true,
-    imports: [
-        CartButtonComponent,
-        MatButtonModule,
-        MatCardModule,
-        MatIconModule,
-        MatSidenavModule,
-        MatToolbarModule,
-        NgIf
-    ],
+  imports: [
+    CartButtonComponent,
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    NgIf,
+    ListItemsComponent
+  ],
   templateUrl: './nutritie.component.html',
   styleUrl: './nutritie.component.css'
 })
 export class NutritieComponent {
-  constructor(private router: Router, private userService: UserService) {
-
+  constructor(private router: Router, private userService: UserService, private itemService: ItemService) {
+    itemService.readItemsByCategory("Nutritie")
   }
 
   isUserAdmin() {

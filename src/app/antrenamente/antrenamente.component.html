@@ -58,7 +58,7 @@
       <button mat-icon-button class="example-icon" (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
-      <span>My App</span>
+      <span class="toolbar-logo"><img class="img-logo" (click)="onLogo()" src="../../assets/gym-logo.jpeg"/></span>
       <span class="example-spacer"></span>
       <button mat-icon-button class="example-icon favorite-icon">
         <mat-icon>favorite</mat-icon>
@@ -68,6 +68,7 @@
       </button>
       <app-cart-button></app-cart-button>
     </mat-toolbar>
+    <app-list-items [isAdmin]="false"></app-list-items>
   </div>
 
 </mat-drawer-container>

@@ -8,25 +8,28 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {NgIf} from "@angular/common";
 import {Router} from "@angular/router";
 import {UserService} from "../services/user.service";
+import {ListItemsComponent} from "../list-items/list-items.component";
+import {ItemService} from "../services/item.service";
 
 @Component({
   selector: 'app-suplimente',
   standalone: true,
-    imports: [
-        CartButtonComponent,
-        MatButtonModule,
-        MatCardModule,
-        MatIconModule,
-        MatSidenavModule,
-        MatToolbarModule,
-        NgIf
-    ],
+  imports: [
+    CartButtonComponent,
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    NgIf,
+    ListItemsComponent
+  ],
   templateUrl: './suplimente.component.html',
   styleUrl: './suplimente.component.css'
 })
 export class SuplimenteComponent {
-  constructor(private router: Router, private userService: UserService) {
-
+  constructor(private router: Router, private userService: UserService, private itemService:ItemService) {
+    itemService.readItemsByCategory("Suplimente")
   }
 
   isUserAdmin() {
