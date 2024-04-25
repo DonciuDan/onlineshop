@@ -39,7 +39,11 @@
 }
 
 .img-banner{
-  width: 30%;
+  /*border: 2px; !* Setează grosimea și culoarea chenarului *!*/
+  background-color: rgba(215, 186, 154, 0.9);
+  padding: 10px; /* Adaugă un spațiu între chenar și imagine */
+  display: inline-block;
+  width: 29%;
   margin: 16px;
   height: 200px;
   border-radius: 5px;
@@ -79,4 +83,89 @@
   display: flex;
   /*flex: 1 1 auto;*/
   /*text-align: center;*/
+}
+.our-story {
+  /*position: fixed;*/
+  top: 30px;
+  width: 700px;
+  margin-left: 280px;
+  margin-bottom: 35px;
+  margin-right: 47px;
+  background-color: rgba(215, 186, 154, 0.9);
+
+}
+.our-story-two{
+  top: 30px;
+  width: auto;
+  margin-left: 16px;
+  margin-bottom: 20px;
+  margin-right: 47px;
+  background-color: rgba(215, 186, 154, 0.9);
+
+}
+
+.card-title-tree{
+  color: #EC1C24;
+  font-family: "Graphik", Sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  margin-left: 207px;
+}
+
+.card-title {
+  color: #EC1C24;
+  font-family: "Graphik", Sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  margin-left: 35px;
+  margin-bottom: 3px;
+}
+
+.card-subtitle{
+  color: #000000;
+  font-family: "Graphik", Sans-serif;
+  font-size: 15px;
+  /*line-height: 1.2em;*/
+  font-weight: bold;
+  margin-left: 180px;
+}
+
+.image-content{
+  margin-left: 360px;
+  height: 300px;
+  width: 450px;
+}
+
+.card-title-two{
+  color: #EC1C24;
+  font-family: "Graphik", Sans-serif;
+  font-size: 21px;
+  font-weight: 799;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.chapters{
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+
+.nutritie-content{
+  font-weight: 550;
+}
+
+.program-titlu{
+  margin-bottom: 0px;
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 260px;
+}
+
+.program-orar{
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 220px;
 }

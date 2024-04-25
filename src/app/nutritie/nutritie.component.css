@@ -80,3 +80,58 @@
   /*flex: 1 1 auto;*/
   /*text-align: center;*/
 }
+
+.our-story {
+  /*position: fixed;*/
+  top: 30px;
+  width: auto;
+  margin-left: 16px;
+  margin-bottom: 20px;
+  margin-right: 47px;
+  background-color: rgba(215, 186, 154, 0.9);
+
+}
+
+
+
+.card-title {
+  color: #EC1C24;
+  font-family: "Graphik", Sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  margin-left: 170px;
+  margin-bottom: 10px;
+}
+
+.card-subtitle{
+  color: #000000;
+  font-family: "Graphik", Sans-serif;
+  /*font-size: 17px;*/
+  /*line-height: 1.2em;*/
+  margin-left: 195px;
+}
+
+.image-content{
+  margin-left: 360px;
+  height: 300px;
+  width: 450px;
+}
+
+.card-title-two{
+  color: #EC1C24;
+  font-family: "Graphik", Sans-serif;
+  font-size: 19px;
+  font-weight: 799;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.chapters{
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+
+.nutritie-content{
+  font-weight: 550;
+}

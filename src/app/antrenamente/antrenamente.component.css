@@ -16,7 +16,7 @@
 
 }
 
-.card-menu-button{
+.card-menu-button {
   width: 350px;
   margin-bottom: 16px;
   cursor: pointer;
@@ -24,13 +24,13 @@
   /*background-color: rgba(215, 186, 154, 1)*/
 }
 
-.div-logo{
+.div-logo {
   width: 100%; /*  va lua spatiul disponibili*/
   display: flex;
 
 }
 
-.img-logo{
+.img-logo {
   /*background-image: url("../../assets/phone.png");*/
   height: 150px;
   margin: auto;
@@ -38,7 +38,7 @@
   cursor: pointer;
 }
 
-.img-banner{
+.img-banner {
   width: 30%;
   margin: 16px;
   height: 200px;
@@ -73,10 +73,37 @@
   background-color: rgba(215, 186, 154, 1);
 }
 
-.toolbar-logo .img-logo{
+.toolbar-logo .img-logo {
   height: 60px;
   /*margin: auto;*/
   display: flex;
   /*flex: 1 1 auto;*/
   /*text-align: center;*/
+}
+
+.our-story {
+  /*position: fixed;*/
+  top: 30px;
+  width: 600px;
+  margin-left: 355px;
+  margin-bottom: 45px;
+  background-color: rgba(215, 186, 154, 0.9);
+
+}
+
+.card-title {
+  color: #EC1C24;
+  font-family: "Graphik", Sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  margin-left: 30px;
+}
+
+.card-subtitle{
+  color: #000000;
+  font-family: "Graphik", Sans-serif;
+  /*font-size: 17px;*/
+  /*line-height: 1.2em;*/
+  margin-left: 195px;
 }

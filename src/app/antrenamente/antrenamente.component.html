@@ -60,14 +60,35 @@
       </button>
       <span class="toolbar-logo"><img class="img-logo" (click)="onLogo()" src="../../assets/gym-logo.jpeg"/></span>
       <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon favorite-icon">
-        <mat-icon>favorite</mat-icon>
-      </button>
-      <button mat-icon-button class="example-icon">
-        <mat-icon>share</mat-icon>
-      </button>
+<!--      <button mat-icon-button class="example-icon favorite-icon">-->
+<!--        <mat-icon>favorite</mat-icon>-->
+<!--      </button>-->
+<!--      <button mat-icon-button class="example-icon">-->
+<!--        <mat-icon>share</mat-icon>-->
+<!--      </button>-->
       <app-cart-button></app-cart-button>
     </mat-toolbar>
+    <mat-card class="our-story">
+      <mat-card-header>
+        <!--      <div mat-card-avatar class="example-header-image"></div>-->
+        <mat-card-title class="card-title">
+          Antrenori Personali
+        </mat-card-title>
+        <mat-card-subtitle class="card-subtitle"><h3>Motivația de care ai nevoie</h3></mat-card-subtitle>
+        <!--        Descoperă cel mai sănătos stil de viață alături de antrenorii personali D.D Fitness!-->
+        <!--        Vino să îți depășești limitele, să îți descoperi determinarea și să intri în cea mai bună formă în cele 4 de cluburi din București și din țară!-->
+      </mat-card-header>
+      <mat-card-content>
+        <p></p>
+        <p>
+          Fie că ți-ai propus să pierzi în greutate în timp record, să-ți recapeți energia sau să ai un tonus mai bun,
+          alături de un antrenor personal ești cu un pas mai aproape de a-ți atinge obiectivele de fitness, pentru că vă
+          fi lângă tine pe tot parcursul călătoriei tale, oferindu-ți toată motivația de care ai nevoie.
+          Expertiza experților în health & fitness îți oferă o perspectivă nouă asupra programului de antrenament,
+          pentru a te stimula să atingi potențialul maxim, dar și pentru a te învăța bazele unui stil de viață sănătos.
+        </p>
+      </mat-card-content>
+    </mat-card>
     <app-list-items [isAdmin]="false"></app-list-items>
   </div>
 

@@ -59,12 +59,12 @@
       </button>
       <span class="toolbar-logo"><img class="img-logo" (click)="onLogo()" src="../../assets/gym-logo.jpeg"/></span>
       <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon favorite-icon">
-        <mat-icon>favorite</mat-icon>
-      </button>
-      <button mat-icon-button class="example-icon">
-        <mat-icon>share</mat-icon>
-      </button>
+<!--      <button mat-icon-button class="example-icon favorite-icon">-->
+<!--        <mat-icon>favorite</mat-icon>-->
+<!--      </button>-->
+<!--      <button mat-icon-button class="example-icon">-->
+<!--        <mat-icon>share</mat-icon>-->
+<!--      </button>-->
       <app-cart-button></app-cart-button>
     </mat-toolbar>
     <!--    <img class="img-banner"-->
@@ -78,40 +78,92 @@
   </div>
 
   <div class="video-section">
-    <video class="video-home-page" autoplay="" muted="" playsinline=""
-           src="../../assets/video1.mp4">
+    <video class="video-home-page" autoplay="" muted="1" playsinline=""
+           src="../../assets/video.mp4">
       <!--           style="width: 503px; height: 282.938px;">-->
     </video>
   </div>
   <mat-card class="our-story">
     <mat-card-header>
-<!--      <div mat-card-avatar class="example-header-image"></div>-->
-      <mat-card-title >Povestea noastra </mat-card-title>
+      <!--      <div mat-card-avatar class="example-header-image"></div>-->
+      <mat-card-title>Povestea noastra</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <p></p>
       <p>
-        Totul a început cu pasiunea și visul unui antrenor dedicat, numit Dan. Dan a fost întotdeauna fascinat de fitness și de modul în care acesta poate transforma viețile oamenilor. În timp ce lucra ca antrenor la diverse săli de fitness, el își dădea seama că vrea să creeze ceva mai mult decât un simplu loc de antrenament. Voia să creeze un mediu în care oamenii să se simtă motivați, încurajați și susținuți în călătoria lor către sănătate și bunăstare.
+        Totul a început cu pasiunea și visul unui antrenor dedicat, numit Dan. Dan a fost întotdeauna fascinat de
+        fitness și de modul în care acesta poate transforma viețile oamenilor. În timp ce lucra ca antrenor la diverse
+        săli de fitness, el își dădea seama că vrea să creeze ceva mai mult decât un simplu loc de antrenament. Voia să
+        creeze un mediu în care oamenii să se simtă motivați, încurajați și susținuți în călătoria lor către sănătate și
+        bunăstare.
       </p>
       <p>
-        Cu acest vis în minte, Dan a început să-și pună planurile în aplicare. Cu multă muncă și sacrificii personale, Dan a reușit să deschidă ușile sălii de fitness in anul 2014. În primele zile, sala era mică și modestă, iar numărul clienților era limitat. Totuși, pasiunea și angajamentul lui Dan au început să atragă oamenii în căutarea unui loc în care să se antreneze și să se simtă parte dintr-o comunitate.
+        Cu acest vis în minte, Dan a început să-și pună planurile în aplicare. Cu multă muncă și sacrificii personale,
+        Dan a reușit să deschidă ușile sălii de fitness in anul 2014. În primele zile, sala era mică și modestă, iar
+        numărul clienților era limitat. Totuși, pasiunea și angajamentul lui Dan au început să atragă oamenii în
+        căutarea unui loc în care să se antreneze și să se simtă parte dintr-o comunitate.
       </p>
       <p>
-        Pe măsură ce timpul a trecut, reputatia salii a început să se răspândească. Oamenii au început să aprecieze atmosfera prietenoasă și motivatoare, precum și profesionalismul și dedicarea antrenorilor. Prin grija și atenția acordată fiecărui client, Dan a reușit să construiască o comunitate loială în jurul sălii sale de fitness.
+        Pe măsură ce timpul a trecut, reputatia salii a început să se răspândească. Oamenii au început să aprecieze
+        atmosfera prietenoasă și motivatoare, precum și profesionalismul și dedicarea antrenorilor. Prin grija și
+        atenția acordată fiecărui client, Dan a reușit să construiască o comunitate loială în jurul sălii sale de
+        fitness.
       </p>
       <p>
-        Astfel, povestea sălii de fitness a început cu visul, pasiunea si valoriile unui antrenor dedicat, care a fost determinat să creeze un spațiu în care oamenii să se simtă inspirați și încurajați, indiferent de stadiul in care sunt, să-și îmbunătățească sănătatea și calitatea vieții lor. De-a lungul timpului, această pasiune și angajament au transformat sala de fitness într-un loc de referință în comunitatea sa.
+        Astfel, povestea sălii de fitness a început cu visul, pasiunea si valoriile unui antrenor dedicat, care a fost
+        determinat să creeze un spațiu în care oamenii să se simtă inspirați și încurajați, indiferent de stadiul in
+        care sunt, să-și îmbunătățească sănătatea și calitatea vieții lor. De-a lungul timpului, această pasiune și
+        angajament au transformat sala de fitness într-un loc de referință în comunitatea sa.
       </p>
     </mat-card-content>
   </mat-card>
-  <mat-grid-list cols="3" rowHeight="2.3:1">
+  <mat-grid-list class="grid-list-one" cols="3" rowHeight="2.3:1">
     <mat-grid-tile>
-      <div class="img-members"><img src ="../../assets/gym-members.png"/> </div>
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+        <div style="line-height: 1;" class="members-club-trainers">2000</div>
+        <div style="line-height: 1;"><h1> Membri Activi </h1></div>
+      </div>
     </mat-grid-tile>
-    <mat-grid-tile>2</mat-grid-tile>
-    <mat-grid-tile>3</mat-grid-tile>
+    <mat-grid-tile>
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+        <div style="line-height: 1;" class="members-club-trainers">6</div>
+        <div style="line-height: 1;"><h1> Cluburi in Romania</h1></div>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+        <div style="line-height: 1;" class="members-club-trainers">50</div>
+        <div style="line-height: 1;"><h1> Antrenori Calificati</h1></div>
+      </div>
+    </mat-grid-tile>
   </mat-grid-list>
 
+
+  <mat-grid-list class="grid-list-two" cols="3" rowHeight="1.5:1">
+    <mat-grid-tile class="img-grid-tile-one">
+      <button mat-flat-button color="warn" (click)="onAntrenamente()">Antrenor Personal</button>
+    </mat-grid-tile>
+    <mat-grid-tile class="img-grid-tile-two">
+      <button mat-flat-button color="warn" (click)="onSala()">Abonament</button>
+    </mat-grid-tile>
+    <mat-grid-tile class="img-grid-tile-three">
+      <button mat-flat-button color="warn" (click)="onNutritie()">Plan de Nutritie</button>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+  <mat-grid-list class="grid-list-tree" cols="3" rowHeight="1.5:1">
+    <mat-grid-tile class="img-grid-tile-four">
+      <button mat-flat-button color="warn" (click)="onEchipamenteSportive()">Echipamente de Sport</button>
+    </mat-grid-tile>
+    <mat-grid-tile class="img-grid-tile-five">
+      <button mat-flat-button color="warn" (click)="onSuplimente()">Suplimente</button>
+    </mat-grid-tile>
+    <mat-grid-tile class="img-grid-tile-six">
+      <button mat-flat-button color="warn" (click)="onLogIn()">Intra in cont</button>
+    </mat-grid-tile>
+
+  </mat-grid-list>
 
 </mat-drawer-container>
 
